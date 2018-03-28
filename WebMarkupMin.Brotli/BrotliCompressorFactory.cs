@@ -4,9 +4,17 @@ namespace WebMarkupMin.AspNet.Common.Compressors
 {
     public class BrotliCompressorFactory : ICompressorFactory
     {
-        public string EncodingToken => "br";
-        public CompressionLevel CompressionLevel { get; set; } = CompressionLevel.Optimal;
+        public string EncodingToken { get; } = "br";
 
-        public ICompressor CreateCompressor() => new BrotliCompressor(CompressionLevel);
+        private CompressionLevel _compressionLevel { get; } = CompressionLevel.Fastest;
+
+        public BrotliCompressorFactory() { }
+
+        public BrotliCompressorFactory(BrotliCompressionSettings settings)
+        {
+            _compressionLevel = settings.Level;
+        }
+
+        public ICompressor CreateCompressor() => new BrotliCompressor(_compressionLevel);
     }
 }
