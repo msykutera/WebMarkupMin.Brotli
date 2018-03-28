@@ -7,7 +7,7 @@
     <Description>Package that adds Brotli compression support to WebMarkupMin library. It uses BrotliSharpLib for compression.</Description>
     <PackageId>WebMarkupMin.Brotli</PackageId>
     <Product>WebMarkupMin.Brotli</Product>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
