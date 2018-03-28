@@ -19,11 +19,9 @@ namespace WebMarkupMin.AspNet.Common.Compressors
         {
             if (_compressionLevel == CompressionLevel.NoCompression) return stream;
 
-            using (var brStream = new BrotliStream(stream, CompressionMode.Compress))
-            {
-                brStream.SetQuality(1);
-                return brStream;
-            }
+            var brStream = new BrotliStream(stream, CompressionMode.Compress);
+            brStream.SetQuality(1);
+            return brStream;
         }
     }
 }
