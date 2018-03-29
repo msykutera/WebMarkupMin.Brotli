@@ -6,9 +6,9 @@ namespace WebMarkupMin.AspNet.Common.Compressors
 {
     public class BrotliCompressor : ICompressor
     {
-        public string EncodingToken => "br";
+        public string EncodingToken { get; } = "br";
 
-        private CompressionLevel _compressionLevel;
+        private readonly CompressionLevel _compressionLevel;
 
         public BrotliCompressor(CompressionLevel compressionLevel)
         {
