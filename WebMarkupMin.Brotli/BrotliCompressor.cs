@@ -4,7 +4,7 @@ using System.IO.Compression;
 
 namespace WebMarkupMin.AspNet.Common.Compressors
 {
-    public class BrotliCompressor : ICompressor
+    public sealed class BrotliCompressor : ICompressor
     {
         public string EncodingToken { get; } = "br";
 

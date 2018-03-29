@@ -1,19 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <Authors>Michał Sykutera</Authors>
-    <Company />
+    <TargetFramework>netstandard1.3</TargetFramework>
     <Description>Package that adds Brotli compression support to WebMarkupMin library. It uses BrotliSharpLib for compression.</Description>
+    <Authors>Michał Sykutera</Authors>
+    <Version>1.0.3</Version>
     <PackageId>WebMarkupMin.Brotli</PackageId>
-    <Product>WebMarkupMin.Brotli</Product>
-    <Version>1.0.2</Version>
+    <RepositoryUrl>https://github.com/msykutera/WebMarkupMin.Brotli</RepositoryUrl>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <PackageReference Include="BrotliSharpLib" Version="0.2.1" />
     <PackageReference Include="WebMarkupMin.AspNet.Common" Version="2.4.0" />
-    <PackageReference Include="WebMarkupMin.Core" Version="2.4.0" />
   </ItemGroup>
-
+  
 </Project>

@@ -2,7 +2,7 @@
 
 namespace WebMarkupMin.AspNet.Common.Compressors
 {
-    public class BrotliCompressorFactory : ICompressorFactory
+    public sealed class BrotliCompressorFactory : ICompressorFactory
     {
         public string EncodingToken { get; } = "br";
 
